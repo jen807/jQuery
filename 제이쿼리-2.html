@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="../jQuery/js/jquery-3.7.1.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            
+            $(".box").css({
+                width: "300px",
+                height: "300px",
+                backgroundColor: "salmon"
+            })
+            var boxEl_w = $('.box').width();
+            console.log(boxEl_w)
+            // =>엘리먼트의 가로값과 세로값을 가져옴
+            
+            $(".box_2").css({
+                width: boxEl_w * 2,
+                height: boxEl_w - 200,
+                backgroundColor: "cornflowerblue"
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box_2">
+        <h5>이 엘리먼트의 크기는 box 가로의 두배 만들거에요</h5>
+    </div>
+</body>
+</html>

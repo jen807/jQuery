@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="../jQuery/js/jquery-3.7.1.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            // *css
+            // =>css메서드 내부에 오브젝트를 사용함
+            // =>선택자를 선택하고 css 속성을 넣어주면 됨
+            // =>선택자는 기존 css와 동일하게 사용할 수 있음
+            // =>기본단위는 px단위로 생략가능
+            // =>단위는 문자열이고 숫자나 변수를 연결할땐 + 연결연산자로 연결 가능
+
+             // *마우스 이벤트
+            // =>mousemove: 엘리먼트안에서 마우스가 움직였을때
+            // =>mouseenter: 엘리먼트 안에 마우스가 들어갔을때 
+            // =>mouseleave: 엘리먼트 밖으로 마우스가 나갔을때
+            // =>hover: 엘리먼트에 마우스를 들어가거나 나갔을때
+            // =>mousedown: 엘리먼트에 마우스를 눌렀을때
+            // =>mouseup: 엘리먼트에 마우스를 뗏을때
+            // =>click: 마우스를 눌렀다 뗏을때 
+            // =>dblclick: 일정시간 안에 마우스를 두번 눌렀다 뗏을때 
+
+            // *마우스 이벤트 적용 
+            // ex)
+            // $('선택자').이벤트명(function(){
+            //     ....
+
+            $(".box").css({
+                width: "300px",
+                height: "300px",
+                backgroundColor: "salmon"
+            })
+
+            $(".box:nth-child(2)").css({
+                backgroundColor: "gold",
+            })
+
+            $(".box:nth-child(3)").css({
+                backgroundColor: "teal",
+            })
+
+        });
+
+    </script>
+
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>
+<!-- *제이쿼리 문법
+=> 선택자: &() -->
+
+
+<!-- *제이쿼리
+=> 자바스크립트 라이브러리
+=> 복잡한 자바스크립트 코드를 짧게 작성하여 보다 쉽게 표현할 수 있는 장점
+=> 속도가 느림, 관리측에서 좋지 못함..etc 단점
+
+*자바스크립트와 제이쿼리 차이점
+=> 제이쿼리로 쉽게 작업할 수 있지만 작업하는데 한계가 있음
+=> 자바스크립트로 거의 모든 작업을 할 수 있음 대신 코드의 양이 많음 -->
+
+<!-- *제이쿼리 사용
+1. 제이쿼리 사이트 가서 cdn 또는 파일 받기
+2. head XORMDP <script src="경로"></script>연결하기
+3. 새로은 script 태그를 열어서 제이쿼리 코드 작성
+$(document).ready(function(){}) -->
