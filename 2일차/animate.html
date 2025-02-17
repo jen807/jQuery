@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            // *애니메이트 속성
+            // =>크기값: width, height
+            // =>여백값: margin, padding
+            // =>위치값: left, right, top, bottom
+            // =>투명도: opacity
+            // =>스크롤
+
+            $(".box").css({
+                width: 300,
+                height: 300,
+                backgroundColor:"gold"
+            });
+
+        //     var num = 0
+        //     $(".box").click(function(){
+        //         if(num === 0){
+        //             $(this).animate({
+        //             width: 500
+        //         }, function(){
+        //             $(this).animate({
+        //                 height: 500
+        //             },3000, function(){
+        //                 $(this).animate({
+        //                     marginTop: 100,
+        //                     marginLeft: 100
+        //                 },1000, function(){
+        //                     $(this).animate({
+        //                         opacity: 0.5
+        //                     })
+        //                 })
+        //             })
+        //         })
+        //         num++;
+        //         }else if(num === 1){
+        //             $(this).animate({
+        //                 width: 300,
+        //                 height: 300,
+        //                 marginLeft: 0,
+        //                 marginTop: 0,
+        //                 opacity: 1
+        //             })
+        //             num--;
+        //         }
+        //     })
+
+        // =>박스를 클릭하면 500만큼 이동하고 배경색 변경
+
+        var num = 0
+        $(".box").click(function(){
+            if( num === 0 ){
+                $(this).animate({
+                    marginLeft: 300,
+                    marginTop: 300
+                })
+                $(this).css({
+                    backgroundColor: "red"
+                })
+                num++;
+            }else if(num === 1){
+                $(this).animate({
+                    marginLeft: 0,
+                    marginTop: 0
+                })
+                $(this).css({
+                    backgroundColor: "gold"
+                })
+                num--;
+            }
+        })
+
+
+        })
+
+
+
+
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
+<!-- 
+*리터럴
+=>재활용 코드 -->
