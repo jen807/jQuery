@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 1px solid black;
+        }
+
+        .box[data-color="bgcolor"]{
+            background-color: gold;
+        }
+
+        /* *data-xx */
+        /* => 기본 선택자 외 data 속성을 사용하여 엘리먼트를 선택할 수 있음 */
+        /* => 데이터 값에 정보를 저장하여 스크립트에 정보를 넘겨줄 수 있음 */
+
+        /* attribute 엘리먼트의 클래스를 말함 */
+        /* property css의 속성 */
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $("img").click(function(){
+                $(this).attr(
+                    {
+                        src:"https://png.pngtree.com/thumb_back/fh260/background/20231004/pngtree-vibrant-anime-motion-background-illustration-of-dynamic-red-diagonal-speed-lines-image_13538864.png"
+                        ,alt: "bg img",
+                        width: 300
+                        }
+                )
+            })
+
+        })
+
+    </script>
+</head>
+<body>
+    
+<img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/red-and-blue-pillars-wallpaper-abstract-background-free-image.jpeg?w=600&quality=80" alt="">
+<div class="box"></div>
+<div class="box" data-color="bgcolor"></div>
+</body>
+</html>

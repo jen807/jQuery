@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            // *eq(index)
+            // => 원하는 index의 선택자를 확인함
+            var i = 0;
+
+           $('li').eq(i).click(function(){
+            $(this).css({
+                color: "red"
+            })
+           })
+        })
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+</html>

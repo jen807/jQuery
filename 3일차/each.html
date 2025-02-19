@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $("li").each(function(num){
+                console.log(num)
+                // =>인덱스
+
+                // $(this).attr({
+                //     class:`num num_${num}`
+                // })
+
+                $(this).attr("data-index", num);
+                // => 속성과 값 넣으면 입력가능
+            }).click(function(){
+                var result = $(this).attr('data-index');
+                // => 속성만 넣으면 그 속성의 값을 알아와줌
+                // =>클릭한 선택자의 속성값을 얻어옴
+                console.log(result)
+            })
+
+        });
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <!-- ul>li{$}*4 -->
+    </ul>
+</body>
+</html>
